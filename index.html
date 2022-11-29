@@ -1,14 +1,23 @@
 <!DOCTYPE html>
+<html lang="en-US">
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>replit</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+  <style>
+  table, th, td {
+    border: 1px solid rgb(54, 92, 161);
+    border-style: solid;
+  }
+  </style>
+
   <body>
     <h1 style="font-size:60px;">Headings</h1>
-    <h1>This is heading 1</h1>
+    <h1>This is headings 1</h1>
     <h2>This is heading 2</h2>
     <h3>This is heading 3</h3>
     <h4>This is heading 4</h4>
@@ -17,28 +26,131 @@
 
     <p>This is a paragraph.</p>
     <p>This is another paragraph.</p>
+    <p title="I'm a tooltip">This is a paragraph with a tooltip.</p>
 
-    <a href="https://www.w3schools.com">This is a link</a>
-   
-    <br><br><br>
-    <h2>Images</h2>
+<!--Links-->
+    <br><br>
+    <h1 style="text-align:center;">Links</h1>
     <hr>
 
-    <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+    <a href="https://www.w3schools.com">This is a link</a>
+    <br><a href="https://www.w3schools.com/" target="_blank">Target blank opens link in a new tab</a>
+    
+    <p>The image below is a link.</p>
+    <a href="default.asp"><img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+   
+    <br><a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+    <p>Bookmarks similar to a table of contents:</p>
+    <h2 id="C4">Chapter 4</h2>
+    <a href="#C4">Jump to Chapter 4</a>
+    <!-- Also works between pages: <a href="html_demo.html#C4">Jump to Chapter 4</a> -->
+
+    <!--
+        CSS to change Link colors
+        https://www.w3schools.com/html/html_links_colors.asp
+
+        <style>
+        a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+
+        a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+        </style>
+
+    -->
+
+<!--Images-->
+    <br><br><br>
+    <h1 style="text-align:center;">Images</h1>
+    <hr>
+
+    <p>Two ways to set the width and height:</p>
+    <img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+    <img src="/images/html5.gif" alt="HTML5 Icon" width="104" height="142">
     <br><br><img src="https://www.w3schools.com/images/img_girl.jpg" width="104" height="142">
+
     <br><br><img src="img_girl.jpg" alt="Girl with a jacket"><br>
     <p>the "alt" is text that shows if the image cannot be displayed.</p>
 
-    <p>This is a <br> paragraph with a line break.</p>
+    <p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+        The image will float to the right of the text.</p>
+        
+    <p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+        The image will float to the left of the text.</p>
+
+    
+    <p>coords for rect start in the top left corner, circle starts in the center, and has the radius</p>
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+    <map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+
+    <map name="workmap">
+        <area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()">
+      </map>
+      
+      <script>
+      function myFunction() {
+        alert("You clicked the coffee cup!");
+      }
+      </script>
+
+    <p>Background image for just an element:</p>
+    <p style="background-image: url('img_girl.jpg');">
+
+    <p>Background image for a whole page:</p>
+    <style>
+      body {
+        background-image: url('img_girl.jpg');
+        background-repeat: no-repeat;
+      }
+      </style>
+      <!--https://www.w3schools.com/html/html_images_background.asp-->
+
+    <p>Variable Pictures depending on different screen sizes. No need to load big pic on phone</p>
+    <picture>
+    <source media="(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 465px)" srcset="img_car.jpg">
+    <img src="img_girl.jpg">
+    </picture>
+
+</map>
 
 
+<!--Styles-->
     <br><br>
-    <h2>Styles</h2>
+    <h1 style="text-align:center;">Styles</h1>
     <hr>
 
+    <p>This is a <br> paragraph with a line break.</p>
+
     <p style="font-family:courier;">This is a paragraph.</p>
-    <body style="background-color:LightGray;">
+    <body style="background-color:rgb(37, 36, 36);">
     <p style="color:red;">This is a red paragraph.</p>
+    <p style="color:#ff6347;">This is a red paragraph.</p>
+    <p style="color:rgba(223, 44, 12, 0.6);">This is another way to format color, and transparecy.</p>  
+    <P style="border:2px solid DodgerBlue;">Hello World</p1>
+    <p style="background-color:rgb(25, 66, 82);">This is a paragraph.</p>
     
     <p title="I'm a tooltip">This is a paragraph.</p>
     <h1 style="font-size:300%;">This is a heading</h1>
@@ -64,10 +176,135 @@
 
     <h1 style="text-align:center;">Centered Heading</h1>
     <p style="text-align:center;">Centered paragraph.</p>
-   
-   <br><br>
+
+<!--Formatting-->
+    <br><br>
     <h1 style="text-align:center;">Formatting</h1>
     <hr>
+
+    <b>Bold</b>
+    <strong>Strong</strong>
+    <i>Italic</i>
+    <em>Emphasized</em>
+    <mark>Marked</mark>
+    <small>small</small>
+    <del>deleted</del>
+    <ins>inserted</ins>
+    <sub>subscript</sub>
+    <sup>Superscript</sup>
+
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 50 years, WWF has been protecting the future of nature.
+    The world's leading conservation organization,
+    WWF works in 100 countries and is supported by
+    1.2 million members in the United States and
+    close to 5 million globally.
+    </blockquote>
+
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+    <address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address>
+
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+
+    <!-- Write your comments here -->
+
+<!--CSS-->
+    <br><br>
+    <h1 style="text-align:center;">CSS</h1>
+    <hr>
+
+    <!--
+    Internal CSS:
+    The following CSS sets all <h1> and <p> elements to red, and the background of the page to blue
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    body {background-color: powderblue;}
+    h1   {color: red;}
+    p    {color: red;}
+    </style>
+    </head>
+    <body>
+
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+
+    </body>
+    </html>
+
+    -->
+
+    <!--
+    External CSS:
+    references a CSS file that has the styles in it
+
+    index.htm:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+
+    </body>
+    </html>
+
+    styles.css:
+
+    body {
+        background-color: powderblue;
+    }
+    h1 {
+        color: blue;
+    }
+    p {
+        color: red;
+    }
+    -->
+
+<!--Tables-->
+    <br><br>
+    <h1 style="text-align:center;">Tables</h1>
+    <hr>
+
+    <table>
+        
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+       
+      </table>
 
 
 
